@@ -225,6 +225,19 @@ function generatePassword() {
 };
 
 let generateBtn = document.querySelector("#generate");
+//added clear password button after encountering bug of not being able to generate new password upon second click
+let clearBtn = document.querySelector("#clear");
+
+//fucntion that resets arrays after clearBtn is clicked
+function clearPassword() {
+  password = [];
+  userLengthChoice = [];
+  allPossibleChars = [];
+  guaranteeChars = [];
+
+  let passwordText = document.querySelector("#password");
+  passwordText.value = "";
+}
 
 // Write password to the #password input
 function writePassword() {
@@ -235,3 +248,4 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+clearBtn.addEventListener("click", clearPassword);
