@@ -97,12 +97,10 @@ let guaranteeChars = [];
 //over arching fuciton that's connected to the click event/button
 function generatePassword() {
 
-  //function that logs user's password length
   function passwordLengthFunc() {
     let pwLength = window.prompt(
       "How long should your password be? (8 min - 128 max)"
     );
-
     if (pwLength < 8) {
       window.alert("Your password must be at least 8 characters.");
       pwLength = "";
@@ -249,3 +247,11 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 clearBtn.addEventListener("click", clearPassword);
+
+
+  //function that logs user's password length this should fix bug of spamming length
+  //while loop to get past
+  //while (pwLength < 8 || pwLength > 128) {
+  //alert("Password must be 8-128 characters");
+  //passwordLengthFunc();
+  //}
