@@ -249,8 +249,8 @@ generateBtn.addEventListener("click", writePassword);
 clearBtn.addEventListener("click", clearPassword);
 
 
-  //function that logs user's password length this should fix bug of spamming length
-  //while loop to get past
+
+  //function that logs user's password length has a bug. Should be fixed using a while loop, but will need to test it
   //while (pwLength < 8 || pwLength > 128) {
   //alert("Password must be 8-128 characters");
   //passwordLengthFunc();
